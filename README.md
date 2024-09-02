@@ -17,6 +17,22 @@ Converts Markdown file(s) to the Anki cards.
   - [Memory limit](#memory-limit)
   - [License](#license)
   - [Changelog](#changelog)
+  - 
+## Tip: Practical steps to solve memory limit issue
+Just remind other guys might use this .
+If you got a like a 3MB .md file: 
+
+Assume u use ubuntu2204lts
+```bash
+sudo pnpm install -g mdanki
+su root
+/usr/local/lib/node_modules/mdanki/src
+cd /usr/local/lib/node_modules/mdanki
+cp node_modules/sql.js/js/sql-memory-growth.js  node_modules/sql.js/js/sql.js
+```
+
+then run `mdanki` should be fine.
+
 
 ## Requirements
 
